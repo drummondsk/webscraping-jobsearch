@@ -75,6 +75,6 @@ if __name__ == '__main__':
         find_jobs(UNFAMILIAR_SKILL, HTML_TEXT)
 
         # Wait for a specified amount of time before repeating the process
-        WAIT_TIME = 20
+        WAIT_TIME = 30
         print(f'Waiting {WAIT_TIME} minutes...')
         time.sleep(WAIT_TIME * 60)
