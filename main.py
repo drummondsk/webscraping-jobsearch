@@ -1,4 +1,6 @@
-# Import the necessary libraries
+"""
+Purpose:
+"""
 import time
 from bs4 import BeautifulSoup
 import requests
@@ -69,7 +71,8 @@ if __name__ == '__main__':
         UNFAMILIAR_SKILL = get_unfamiliar_skill()
 
         # Get the HTML text of the job search webpage
-        HTML_TEXT = get_html_text('https://www.timesjobs.com/candidate/job-search.html?searchType=personalizedSearch&from=submit&txtKeywords=Python&txtLocation=')
+        HTML_TEXT = get_html_text('https://www.timesjobs.com/candidate/job-search.html?'
+                                  'searchType=personalizedSearch&from=submit&txtKeywords=Python&txtLocation=')
 
         # Find jobs that do not require the unfamiliar skill
         find_jobs(UNFAMILIAR_SKILL, HTML_TEXT)
