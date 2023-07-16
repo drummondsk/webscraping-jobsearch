@@ -56,23 +56,23 @@ def find_jobs(unfamiliar_skill, html_text):
             if unfamiliar_skill not in skills:
 
                 # Save the job posting details to a text file
-                with open(f'posts/{index}.txt', 'w') as f:
-                    f.write(f"Company Name: {company_name.strip()} \n")
-                    f.write(f"Required Skills: {skills.strip()} \n")
-                    f.write(f"More Info: {more_info}")
+                with open(f'posts/{index}.txt', 'w', encoding='UTF-8') as f_file:
+                    f_file.write(f"Company Name: {company_name.strip()} \n")
+                    f_file.write(f"Required Skills: {skills.strip()} \n")
+                    f_file.write(f"More Info: {more_info}")
 
                 print(f'file saved {index}')
 
 if __name__ == '__main__':
     while True:
         # Ask user for an unfamiliar skill
-        unfamiliar_skill = get_unfamiliar_skill()
+        UNFAMILIAR_SKILL = get_unfamiliar_skill()
 
         # Get the HTML text of the job search webpage
         HTML_TEXT = get_html_text('https://www.timesjobs.com/candidate/job-search.html?searchType=personalizedSearch&from=submit&txtKeywords=Python&txtLocation=')
 
         # Find jobs that do not require the unfamiliar skill
-        find_jobs(unfamiliar_skill, HTML_TEXT)
+        find_jobs(UNFAMILIAR_SKILL, HTML_TEXT)
 
         # Wait for a specified amount of time before repeating the process
         WAIT_TIME = 30

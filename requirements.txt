@@ -18,3 +18,5 @@ soupsieve==2.4.1
 urllib3==2.0.3
 virtualenv==20.23.1
 Werkzeug==2.3.6
+requests==2.31.0
+bs4==0.0.1
