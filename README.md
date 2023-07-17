@@ -1,3 +1,4 @@
+[![linting: pylint](https://ci.appveyor.com/api/projects/status/kayjdh5qtgymhoxr/branch/master?svg=true)](https://github.com/drummondsk/webscraping-jobsearch/actions/workflows/pylint.yml)
 # Job Scraper
 
 ## Description
